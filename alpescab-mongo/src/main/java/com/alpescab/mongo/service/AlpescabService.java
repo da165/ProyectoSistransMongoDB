@@ -173,7 +173,7 @@ public class AlpescabService {
                         e.getKey(),
                         e.getValue(),
                         total == 0 ? 0.0 : (100.0 * e.getValue() / total)))
-                .sorted((a, b) -> Long.compare(b.count(), a.count()))
+                .sorted((a, b) -> Long.compare(b.getCount(), a.getCount()))
                 .toList();
     }
 
