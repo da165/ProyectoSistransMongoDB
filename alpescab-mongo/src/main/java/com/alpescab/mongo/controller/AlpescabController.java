@@ -2,13 +2,12 @@ package com.alpescab.mongo.controller;
 
 import com.alpescab.mongo.model.*;
 import com.alpescab.mongo.service.AlpescabService;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import com.alpescab.mongo.dto.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -79,14 +78,3 @@ public class AlpescabController {
     }
 }
 
-@Getter
-@Setter
-class RequestTripDTO {
-    private String serviceUserId;
-    private String serviceType;
-    private String level;
-    private GeoPoint startPoint;
-    private java.util.List<GeoPoint> endPoints;
-    private double distanceKm;
-    private double pricePerKm;
-}
